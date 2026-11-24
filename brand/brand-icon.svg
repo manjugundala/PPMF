@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Texas flag brand icon">
+  <title>Texas flag brand icon</title>
+  <defs>
+    <clipPath id="tile"><rect width="512" height="512" rx="112"/></clipPath>
+    <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A3A8C"/><stop offset="1" stop-color="#002868"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4134A"/><stop offset="1" stop-color="#BF0D3E"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="512" height="512" fill="#FFFFFF"/>
+    <rect x="204" y="0" width="308" height="256" fill="#F5F7FA"/>
+    <rect x="204" y="256" width="308" height="256" fill="url(#red)"/>
+    <rect x="0" y="0" width="204" height="512" fill="url(#navy)"/>
+    <polygon points="102.0,182.0 118.6,233.1 172.4,233.1 128.9,264.7 145.5,315.9 102.0,284.3 58.5,315.9 75.1,264.7 31.6,233.1 85.4,233.1" fill="#FFFFFF"/>
+    
+    <rect width="512" height="512" fill="url(#sheen)"/>
+  </g>
+</svg>

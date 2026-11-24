@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Power Platform Monitoring Framework (PPMF)"
+abstract: >-
+  A low-code monitoring framework for Microsoft Power Platform that detects broken
+  connections across environments, resolves the cloud flows and canvas apps they
+  affect, notifies each connection owner with remediation steps, and records all
+  activity in a structured Dataverse log.
+authors:
+  - given-names: "Manjunath"
+    family-names: "Gundala"
+type: software
+version: "1.0.0.0"
+date-released: "2026-11-24"
+license: MIT
+repository-code: "https://github.com/manjugundala/PPMF"
+keywords:
+  - Power Platform
+  - Power Automate
+  - Power Apps
+  - Dataverse
+  - monitoring
+  - observability
+  - low-code
