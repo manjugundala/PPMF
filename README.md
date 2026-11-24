@@ -56,44 +56,20 @@ See [docs/roadmap.md](docs/roadmap.md).
 ## How it works
 
 ```mermaid
-flowchart LR
-    subgraph Admin["System administrator"]
-        APP["PPMF Configuration App<br/>(canvas app)"]
-    end
-
-    subgraph DV["Dataverse (PPMF solution)"]
-        CFG[("PPMF | Configuration<br/>admin emails, last inventory run")]
-        ENV[("PPMF | Environments<br/>enabled for monitoring?")]
-        LOG[("PPMF | Logs<br/>structured run log")]
-    end
-
-    subgraph Flows["Power Automate"]
-        INV["Inventory Flow"]
-        DET["Detect Broken Connections<br/>(daily)"]
-    end
-
-    subgraph Tenant["Power Platform tenant"]
-        PPA["Power Platform Admin API<br/>environments"]
-        PAA["Power Apps for Admins<br/>connections + apps"]
-        EDV["Each environment's Dataverse<br/>flows + connection references"]
-    end
-
-    OWN["Connection owners"]
-    ADM["Admin recipients"]
-
-    APP -- "save recipients" --> CFG
-    APP -- "enable / disable" --> ENV
-    APP -- "Run inventory" --> INV
-    INV --> PPA
-    INV -- "upsert" --> ENV
-    DET -- "read" --> CFG
-    DET -- "enabled only" --> ENV
-    DET --> PAA
-    DET --> EDV
-    DET -- "every run" --> LOG
-    INV -- "errors" --> LOG
-    DET -- "personal list" --> OWN
-    DET -- "summary" --> ADM
+flowchart TB
+    ADMIN(["System administrator"]) --> APP["PPMF Configuration App"]
+    APP -->|"recipients"| CFG[("Configuration")]
+    APP -->|"enable / disable"| ENV[("Environments")]
+    APP -->|"run inventory"| INV["Inventory Flow"]
+    INV -->|"discover environments"| ENV
+    CFG --> DET["Detect Broken Connections<br/>(daily)"]
+    ENV -->|"enabled only"| DET
+    DET <-->|"connections, apps"| API["Power Platform admin APIs"]
+    DET <-->|"flows, connection references"| EDV["Each environment's Dataverse"]
+    DET -->|"personal fix list"| OWN(["Connection owners"])
+    DET -->|"summary"| ADM(["Admin recipients"])
+    DET -->|"every run"| LOG[("Logs")]
+    INV -.->|"errors"| LOG
 ```
 
 A deeper walkthrough, with sequence and data-model diagrams, is in
