@@ -12,7 +12,7 @@
 
 <p align="center">
   <img alt="Platform" src="https://img.shields.io/badge/Power%20Platform-Dataverse-002868">
-  <img alt="Solution" src="https://img.shields.io/badge/solution-PPMF%201.0.0.0-BF0D3E">
+  <img alt="Solution" src="https://img.shields.io/badge/solution-PPMF%201.0.1.0-BF0D3E">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-002868">
 </p>
 
@@ -101,7 +101,7 @@ A deeper walkthrough, with sequence and data-model diagrams, is in
 
 ## Quick start
 
-1. **Install:** import `solution/PPMF_1_0_0_0_managed.zip` into a monitoring environment
+1. **Install:** import `solution/PPMF_1_0_1_0_managed.zip` into a monitoring environment
    and connect the three connection references when prompted (Dataverse, Power Apps for Admins,
    Office 365 Outlook). → [docs/installation.md](docs/installation.md)
 2. **Configure:** open **PPMF - Configuration App**, enter the admin email addresses,

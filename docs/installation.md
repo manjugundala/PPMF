@@ -21,6 +21,7 @@ owns the flows:
 | Power Apps for Admins | Power Apps for Admins | List connections (with status) and apps in each environment |
 | Power Platform for Admins V2 | Power Platform for Admins V2 | List environments (inventory) |
 | Office 365 Outlook | Office 365 Outlook | Send owner and admin emails |
+| Power Automate Management | Power Automate Management | Not used in 1.0.x. You can leave it without a connection |
 
 > **Tip:** use a dedicated service account with a mailbox, not a personal account, so
 > monitoring keeps working when people change roles. If that account's own connection
@@ -28,7 +29,7 @@ owns the flows:
 
 ## Install the managed solution (recommended)
 
-1. Download `solution/PPMF_1_0_0_0_managed.zip` from this repository.
+1. Download `solution/PPMF_1_0_1_0_managed.zip` from this repository.
 2. Go to [make.powerapps.com](https://make.powerapps.com), select the monitoring environment,
    then **Solutions → Import solution**.
 3. Browse to the zip and click **Next**.
@@ -40,7 +41,7 @@ owns the flows:
 
 ## Install the unmanaged solution (for contributors)
 
-Import `solution/PPMF_1_0_0_0.zip` the same way if you want to change the solution.
+Import `solution/PPMF_1_0_1_0.zip` the same way if you want to change the solution.
 Use a development environment, not production.
 
 ## Post-install checklist

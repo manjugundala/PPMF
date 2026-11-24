@@ -3,6 +3,12 @@
 All notable changes to PPMF are documented here.
 This project follows [Semantic Versioning](https://semver.org/) for solution versions.
 
+## [1.0.1.0] - 2026-11-24
+
+### Fixed
+- Added the **Power Platform for Admins V2** connection reference (used by Inventory Flow)
+  to the solution, so it imports into new environments without a missing-dependency error.
+
 ## [1.0.0.0] - 2026-11-24
 
 ### Added
